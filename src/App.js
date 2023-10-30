@@ -28,6 +28,7 @@ const App = () => {
   return (
     <>
       <h1>Find The Lucky Clover</h1>
+      <h4>Good luck!</h4>
       <div className="board">
         {board.map((value, index) => {
           return (
