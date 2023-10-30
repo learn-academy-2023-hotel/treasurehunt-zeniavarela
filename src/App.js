@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Square from "./components/Square";
 import "./App.css";
-// import grinch from "./images/grinch.png"
-// import { click } from "@testing-library/user-event/dist/click"
-                
 
 const App = () => {
   const [board, setBoard] = useState([
@@ -29,6 +26,7 @@ const App = () => {
   const [gameOver, setGameOver] = useState(false);
 
   const handleSquareClick = (clickedSquareIndex) => {
+
     if (gameOver) {
       return;
     }
@@ -66,6 +64,14 @@ const App = () => {
     setBoard(["?", "?", "?", "?", "?", "?", "?", "?", "?"]);
     setGuesses(5);
     setGameOver(false);
+
+    // var that holds copy of current state
+    let updatedBoard = [...board]
+      // use index from clickedSquareIndex to update current square's value w an emoji
+      updatedBoard[clickedSquareIndex] = "☘️"
+      // update state with the new board
+      setBoard(updatedBoard)
+
   };
 
   return (
@@ -74,6 +80,9 @@ const App = () => {
       <div className="gameRules">
         The Grinch has stolen all of the presents from under the tree! Follow the path he took and get back the presents! But be careful, he's left a trap for us! 
       </div>
+
+      <h1>Find The Lucky Clover</h1>
+
       <div className="board">
         {board.map((value, index) => {
           return (
