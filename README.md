@@ -64,6 +64,10 @@ branch: tree-emoji
 -updated value of square at particular index to be a clover
 
 - As a user, if I select the winning square, the question mark will become a treasure emoji. If I select the losing square, the question mark will become a bomb emoji.
+branch: treasure-bomb
+
+
+
 - As a user, I can click on a “Play Again” button that will restart the game.
 - As a user, I can see a counter that shows how many guesses are remaining. The counter starts at five and decrements by one every time I click on a square that is neither the treasure nor the bomb.
 - As a user, I can see a message stating that I won the game by selecting the square that contains the treasure.
