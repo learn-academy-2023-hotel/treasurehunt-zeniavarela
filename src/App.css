@@ -1,18 +1,57 @@
 h1 {
   text-align: center;
-}
+  font-family: 'The Grinch', sans-serif;                                             
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
 
+}
+.gameRules {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: Trattatello, fantasy;
+  
+}
 .square {
-  height: 200px;
-  width: 200px;
+  height: 165px;
+  width: 165px;
   border: 1px solid black;
-  font-size: 10rem;
+  font-size: 7rem;
   text-align: center;
 }
 
 .board {
   display: flex;
   flex-wrap: wrap;
-  width: 610px;
+  width: 575px;
   margin: 0 auto;
+}
+.remGuesses {
+  text-align: center;
+  color:rgb(134, 20, 20);
+  font-size: 2rem;
+  margin: auto;
+  font-family: Trattatello, fantasy;
+
+}
+
+html {
+  background: url("https://digitaldomain.com/wp-content/uploads/2019/09/Grinch2-1668x1000.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  background-size: 100%;
+}
+.playButton {
+  background-color: rgb(59, 130, 73);
+  display: flex;
+  font-size: 1rem;
+  text-align: center;
+  margin:auto
+}
+
+footer {
+  text-align: center;
+  margin: auto;
+  font-size: 2rem;
 }
