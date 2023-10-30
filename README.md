@@ -59,6 +59,9 @@ branch: index-position
 -passed handleSquareClick to Square to get index back to App.js, using func props
 
 - As a user, when I click on one of the question marks, a tree emoji appears instead of the alert.
+branch: tree-emoji
+-made copy of board using spread operator
+-updated value of square at particular index to be a clover
 
 - As a user, if I select the winning square, the question mark will become a treasure emoji. If I select the losing square, the question mark will become a bomb emoji.
 - As a user, I can click on a “Play Again” button that will restart the game.
