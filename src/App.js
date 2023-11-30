@@ -3,7 +3,6 @@ import Square from "./components/Square";
 import "./App.css";
 // import grinch from "./images/grinch.png"
 // import { click } from "@testing-library/user-event/dist/click"
-                
 
 const App = () => {
   const [board, setBoard] = useState([
@@ -39,13 +38,13 @@ const App = () => {
       // then reassign state value at that index to treasure emoji
       updatedBoard[clickedSquareIndex] = "🎁";
       setGameOver(true);
-      alert("Congratulations! You found the treasure!");
+      alert("Congratulations! You found the presents. You saved Christmas!");
       // setBoard(updatedBoard)
     } else if (clickedSquareIndex === bombLocation) {
       updatedBoard[clickedSquareIndex] = "🤡";
       // setGameOver(true);;
       setGameOver(true);
-      alert("Game over! Try again!");
+      alert("Oops, you fell into a trap. Better luck next time!");
       // setBoard(updatedBoard)
     } else {
       updatedBoard[clickedSquareIndex] = "👣";
@@ -54,11 +53,11 @@ const App = () => {
     setBoard(updatedBoard);
     setGuesses((prevGuesses) => prevGuesses - 1);
   };
-   useEffect(() => {
+  useEffect(() => {
     // hook that ensures game over logic runs after each state update has rendered
     if (guesses === -1) {
       setGameOver(true);
-      alert("Out of turns! Game over!");
+      alert("Out of turns! Better luck next time!");
     }
   }, [guesses]);
 
@@ -72,7 +71,9 @@ const App = () => {
     <>
       <h1>The Grinch Stole Christmas!</h1>
       <div className="gameRules">
-        The Grinch has stolen all of the presents from under the tree! Follow the path he took and get back the presents! But be careful, he's left a trap for us! 
+        The Grinch has stolen all of the presents from under the tree! Follow
+        the path he took and get back the presents! But be careful, he's left a
+        trap for us!
       </div>
       <div className="board">
         {board.map((value, index) => {
@@ -85,12 +86,13 @@ const App = () => {
           );
         })}
       </div>
-      <button className="playButton" onClick={handlePlayAgain}>Play Again!</button>
+      <button className="playButton" onClick={handlePlayAgain}>
+        Play Again!
+      </button>
       <p className="remGuesses">Remaining Guesses: {guesses} </p>
       {/* <button onClick={handlePlayAgain}>Play Again!</button> */}
-      <footer>&copy;Zenia Varela | Hotel 2023 | Learn Academy</footer>
+      <footer>Zenia Varela | Hotel 2023 | Learn Academy</footer>
     </>
-    
   );
 };
 
